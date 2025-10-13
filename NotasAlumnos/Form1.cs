@@ -63,7 +63,19 @@ namespace NotasAlumnos
             string[] partes;
             string nombre;
             string notas;
+            listcheck.Items.Clear();
             NotasGrid.Rows.Clear();
+            if (File.Exists(file))
+            {
+                using (StreamReader sr = new StreamReader(file))
+                {
+                    while (sr.Peek() != -1)
+                    {
+                        string line = sr.ReadLine();
+                        listcheck.Items.Add(line);
+                    }
+                }
+            }
             if (File.Exists(file))
             {
                 using (StreamReader sr = new StreamReader(file))
@@ -169,22 +181,23 @@ namespace NotasAlumnos
             if(listcheck.CheckedItems.Count > 0)
             {
                 string file = "notas.txt";
+                var lineas = File.ReadAllLines(file).ToList();
                 if (File.Exists(file))
                 {
-                    using (StreamReader sr = new StreamReader(file))
+                    foreach (var item in listcheck.CheckedItems)
                     {
-                        while (sr.Peek() != -1)
+                        lineas.Remove(item.ToString());
+                    }
+
+                    using (StreamWriter sw = new StreamWriter(file))
+                    {
+                        foreach (var linea in lineas)
                         {
-                            string line = sr.ReadLine();
-                            if (listcheck.Items.Equals(line))
-                            {
-                                using (StreamWriter sw = new StreamWriter(file))
-                                {
-                                    
-                                }
-                            }
+                            sw.WriteLine(linea);
                         }
                     }
+
+                    MessageBox.Show("Alumno eliminado", "Aviso");
                 }
 
             }

@@ -158,7 +158,7 @@
             // NotMaxLbl
             // 
             NotMaxLbl.AutoSize = true;
-            NotMaxLbl.Location = new Point(451, 225);
+            NotMaxLbl.Location = new Point(334, 208);
             NotMaxLbl.Name = "NotMaxLbl";
             NotMaxLbl.Size = new Size(0, 15);
             NotMaxLbl.TabIndex = 8;
