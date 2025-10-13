@@ -1,8 +1,6 @@
 <html>
-  <title>
-    <h1>EJERCICIOS FICHEROS</h1>
-  </title>
   <body>
+    <h1>EJERCICIOS FICHEROS</h1>
     <h2>01 - AnalizadorHTML</h2>
     <p>Ejercicio para entregar donde analizamos un HTML, <strong>TODO</strong>strong> ultimo apartado</p>
     <h2>02 - Intro Ficheros</h2>
