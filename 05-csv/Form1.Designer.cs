@@ -31,6 +31,7 @@
             button1 = new Button();
             LeerCSVBtn = new Label();
             btnLeerCSVHelper = new Button();
+            BtnLeerCsvPuntoComa = new Button();
             SuspendLayout();
             // 
             // button1
@@ -61,11 +62,22 @@
             btnLeerCSVHelper.UseVisualStyleBackColor = true;
             btnLeerCSVHelper.Click += btnLeerCSVHelper_Click;
             // 
+            // BtnLeerCsvPuntoComa
+            // 
+            BtnLeerCsvPuntoComa.Location = new Point(46, 116);
+            BtnLeerCsvPuntoComa.Name = "BtnLeerCsvPuntoComa";
+            BtnLeerCsvPuntoComa.Size = new Size(148, 40);
+            BtnLeerCsvPuntoComa.TabIndex = 3;
+            BtnLeerCsvPuntoComa.Text = "Leer CSV Helper ;";
+            BtnLeerCsvPuntoComa.UseVisualStyleBackColor = true;
+            BtnLeerCsvPuntoComa.Click += BtnLeerCsvPuntoComa_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(BtnLeerCsvPuntoComa);
             Controls.Add(btnLeerCSVHelper);
             Controls.Add(LeerCSVBtn);
             Controls.Add(button1);
@@ -81,5 +93,6 @@
         private Button button1;
         private Label LeerCSVBtn;
         private Button btnLeerCSVHelper;
+        private Button BtnLeerCsvPuntoComa;
     }
 }
