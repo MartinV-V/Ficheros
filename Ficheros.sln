@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotasAlumnos", "NotasAlumno
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05-csv", "05-csv\05-csv.csproj", "{D34931D8-27B7-48B7-9D42-61BF54CA5208}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clasificacion_Liga", "Clasificacion_Liga\Clasificacion_Liga.csproj", "{D3DF97F4-72F1-4D6B-96D2-81EF32C74EBE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{D34931D8-27B7-48B7-9D42-61BF54CA5208}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D34931D8-27B7-48B7-9D42-61BF54CA5208}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D34931D8-27B7-48B7-9D42-61BF54CA5208}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3DF97F4-72F1-4D6B-96D2-81EF32C74EBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3DF97F4-72F1-4D6B-96D2-81EF32C74EBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3DF97F4-72F1-4D6B-96D2-81EF32C74EBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3DF97F4-72F1-4D6B-96D2-81EF32C74EBE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
