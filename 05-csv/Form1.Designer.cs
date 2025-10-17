@@ -33,6 +33,7 @@
             btnLeerCSVHelper = new Button();
             BtnLeerCsvPuntoComa = new Button();
             btnHelper = new Button();
+            SaveBtn = new Button();
             SuspendLayout();
             // 
             // button1
@@ -83,11 +84,22 @@
             btnHelper.UseVisualStyleBackColor = true;
             btnHelper.Click += btnHelper_Click;
             // 
+            // SaveBtn
+            // 
+            SaveBtn.Location = new Point(266, 24);
+            SaveBtn.Name = "SaveBtn";
+            SaveBtn.Size = new Size(148, 40);
+            SaveBtn.TabIndex = 5;
+            SaveBtn.Text = "Save Helper";
+            SaveBtn.UseVisualStyleBackColor = true;
+            SaveBtn.Click += SaveBtn_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(568, 230);
+            Controls.Add(SaveBtn);
             Controls.Add(btnHelper);
             Controls.Add(BtnLeerCsvPuntoComa);
             Controls.Add(btnLeerCSVHelper);
@@ -107,5 +119,6 @@
         private Button btnLeerCSVHelper;
         private Button BtnLeerCsvPuntoComa;
         private Button btnHelper;
+        private Button SaveBtn;
     }
 }

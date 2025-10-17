@@ -93,7 +93,7 @@ namespace _05_csv
             string fichero = "personas_punto_coma.csv";
             var config = new CsvConfiguration(CultureInfo.InvariantCulture)
             {
-                Delimiter = "," //Establece el limitador en punto y coma
+                Delimiter = ",", //Establece el limitador en punto y coma
             };
 
             StreamReader sr = new StreamReader(fichero);
@@ -108,6 +108,31 @@ namespace _05_csv
                                             + " " + persona.altura + System.Environment.NewLine;
                 }
             }
+        }
+
+        private void SaveBtn_Click(object sender, EventArgs e)
+        {
+            string fichero = "personas_gaurdadas.csv";
+            var config = new CsvHelper.Configuration.CsvConfiguration(CultureInfo.InvariantCulture)
+            {
+                Delimiter = ","
+            };
+
+            // Supón que tienes una lista de personas en tu formulario
+            List<Persona> personas = new List<Persona>
+            {
+                new Persona { nombre = "Juan", edad = 30, altura = 175 },
+                new Persona { nombre = "Ana", edad = 25, altura = 165 }
+                // Añade más personas según tu lógica
+            };
+
+            using (var writer = new StreamWriter(fichero,true,new System.Text.UTF8Encoding(true)))
+            using (var csv = new CsvWriter(writer, config))
+            {
+                csv.WriteRecords(personas);
+            }
+
+            MessageBox.Show("Personas guardadas correctamente en el CSV.");
         }
     }
 }
