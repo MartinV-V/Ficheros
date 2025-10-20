@@ -15,6 +15,20 @@ namespace Clasificacion_Liga
             public int Result2 { get; set; }
             public string Equipo2 { get; set; }
         }
+
+        public class Puntos
+        {
+            public int Posicion { get; set; }
+            public string Equipo1 { get; set; }
+            public int Pts { get; set; }
+            public int Pj { get; set; }
+            public int Pg { get; set; }
+            public int Pe { get; set; }
+            public int Pp { get; set; }
+            public int Gf { get; set; }
+            public int Gc { get; set; }
+            public int Dg { get; set; }
+        }
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -54,7 +68,12 @@ namespace Clasificacion_Liga
 
         private void BuscarBtn_Click(object sender, EventArgs e)
         {
-                
+
+        }
+
+        private void VerTodoLigaBtn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

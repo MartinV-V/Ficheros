@@ -116,6 +116,7 @@
             VerTodoLigaBtn.TabIndex = 10;
             VerTodoLigaBtn.Text = "Ver Todo";
             VerTodoLigaBtn.UseVisualStyleBackColor = true;
+            VerTodoLigaBtn.Click += VerTodoLigaBtn_Click;
             // 
             // panel2
             // 
