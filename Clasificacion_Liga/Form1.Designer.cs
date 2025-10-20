@@ -32,38 +32,11 @@
             Label label1;
             Label label2;
             dataGridView1 = new DataGridView();
-            Equipo = new DataGridViewTextBoxColumn();
-            PT = new DataGridViewTextBoxColumn();
-            PJ = new DataGridViewTextBoxColumn();
-            PG = new DataGridViewTextBoxColumn();
-            PE = new DataGridViewTextBoxColumn();
-            PP = new DataGridViewTextBoxColumn();
-            GF = new DataGridViewTextBoxColumn();
-            GC = new DataGridViewTextBoxColumn();
-            PT2 = new DataGridViewTextBoxColumn();
-            PJ2 = new DataGridViewTextBoxColumn();
-            PG2 = new DataGridViewTextBoxColumn();
-            PE2 = new DataGridViewTextBoxColumn();
-            PP2 = new DataGridViewTextBoxColumn();
-            GF2 = new DataGridViewTextBoxColumn();
-            GC2 = new DataGridViewTextBoxColumn();
-            PT3 = new DataGridViewTextBoxColumn();
-            PJ3 = new DataGridViewTextBoxColumn();
-            PG3 = new DataGridViewTextBoxColumn();
-            PE3 = new DataGridViewTextBoxColumn();
-            PP3 = new DataGridViewTextBoxColumn();
-            GF3 = new DataGridViewTextBoxColumn();
-            GC3 = new DataGridViewTextBoxColumn();
             panel1 = new Panel();
             VerTodoLigaBtn = new Button();
             panel2 = new Panel();
             VerTodoPartBtn = new Button();
-            dataGridView2 = new DataGridView();
-            Jornada = new DataGridViewTextBoxColumn();
-            Equipo1 = new DataGridViewTextBoxColumn();
-            Puntuacion = new DataGridViewTextBoxColumn();
-            goleEqVisit = new DataGridViewTextBoxColumn();
-            Equipo2 = new DataGridViewTextBoxColumn();
+            JornadaData = new DataGridView();
             panel3 = new Panel();
             GuardarBtn = new Button();
             BuscarBtn = new Button();
@@ -81,7 +54,7 @@
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)JornadaData).BeginInit();
             panel3.SuspendLayout();
             SuspendLayout();
             // 
@@ -115,122 +88,11 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Equipo, PT, PJ, PG, PE, PP, GF, GC, PT2, PJ2, PG2, PE2, PP2, GF2, GC2, PT3, PJ3, PG3, PE3, PP3, GF3, GC3 });
             dataGridView1.Dock = DockStyle.Bottom;
             dataGridView1.Location = new Point(0, 59);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.Size = new Size(2242, 388);
             dataGridView1.TabIndex = 0;
-            // 
-            // Equipo
-            // 
-            Equipo.HeaderText = "Equipo";
-            Equipo.Name = "Equipo";
-            // 
-            // PT
-            // 
-            PT.HeaderText = "PT";
-            PT.Name = "PT";
-            // 
-            // PJ
-            // 
-            PJ.HeaderText = "PJ";
-            PJ.Name = "PJ";
-            // 
-            // PG
-            // 
-            PG.HeaderText = "PG";
-            PG.Name = "PG";
-            // 
-            // PE
-            // 
-            PE.HeaderText = "PE";
-            PE.Name = "PE";
-            // 
-            // PP
-            // 
-            PP.HeaderText = "PP";
-            PP.Name = "PP";
-            // 
-            // GF
-            // 
-            GF.HeaderText = "GF";
-            GF.Name = "GF";
-            // 
-            // GC
-            // 
-            GC.HeaderText = "GC";
-            GC.Name = "GC";
-            // 
-            // PT2
-            // 
-            PT2.HeaderText = "PT";
-            PT2.Name = "PT2";
-            // 
-            // PJ2
-            // 
-            PJ2.HeaderText = "PJ";
-            PJ2.Name = "PJ2";
-            // 
-            // PG2
-            // 
-            PG2.HeaderText = "PG";
-            PG2.Name = "PG2";
-            // 
-            // PE2
-            // 
-            PE2.HeaderText = "PE";
-            PE2.Name = "PE2";
-            // 
-            // PP2
-            // 
-            PP2.HeaderText = "PP";
-            PP2.Name = "PP2";
-            // 
-            // GF2
-            // 
-            GF2.HeaderText = "GF";
-            GF2.Name = "GF2";
-            // 
-            // GC2
-            // 
-            GC2.HeaderText = "GC";
-            GC2.Name = "GC2";
-            // 
-            // PT3
-            // 
-            PT3.HeaderText = "PT";
-            PT3.Name = "PT3";
-            // 
-            // PJ3
-            // 
-            PJ3.HeaderText = "PJ";
-            PJ3.Name = "PJ3";
-            // 
-            // PG3
-            // 
-            PG3.HeaderText = "PG";
-            PG3.Name = "PG3";
-            // 
-            // PE3
-            // 
-            PE3.HeaderText = "PE";
-            PE3.Name = "PE3";
-            // 
-            // PP3
-            // 
-            PP3.HeaderText = "PP";
-            PP3.Name = "PP3";
-            // 
-            // GF3
-            // 
-            GF3.HeaderText = "GF";
-            GF3.Name = "GF3";
-            // 
-            // GC3
-            // 
-            GC3.HeaderText = "GC";
-            GC3.Name = "GC3";
             // 
             // panel1
             // 
@@ -258,7 +120,7 @@
             // panel2
             // 
             panel2.Controls.Add(VerTodoPartBtn);
-            panel2.Controls.Add(dataGridView2);
+            panel2.Controls.Add(JornadaData);
             panel2.Dock = DockStyle.Right;
             panel2.Location = new Point(1204, 0);
             panel2.Name = "panel2";
@@ -276,41 +138,15 @@
             VerTodoPartBtn.UseVisualStyleBackColor = true;
             VerTodoPartBtn.Click += VerTodoPartBtn_Click;
             // 
-            // dataGridView2
+            // JornadaData
             // 
-            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Columns.AddRange(new DataGridViewColumn[] { Jornada, Equipo1, Puntuacion, goleEqVisit, Equipo2 });
-            dataGridView2.Dock = DockStyle.Fill;
-            dataGridView2.Location = new Point(0, 0);
-            dataGridView2.Name = "dataGridView2";
-            dataGridView2.Size = new Size(1038, 688);
-            dataGridView2.TabIndex = 0;
-            dataGridView2.CellContentClick += dataGridView2_CellContentClick;
-            // 
-            // Jornada
-            // 
-            Jornada.HeaderText = "Jornada";
-            Jornada.Name = "Jornada";
-            // 
-            // Equipo1
-            // 
-            Equipo1.HeaderText = "Equipo1";
-            Equipo1.Name = "Equipo1";
-            // 
-            // Puntuacion
-            // 
-            Puntuacion.HeaderText = "goles_eq._local";
-            Puntuacion.Name = "Puntuacion";
-            // 
-            // goleEqVisit
-            // 
-            goleEqVisit.HeaderText = "goles_eq._visitante";
-            goleEqVisit.Name = "goleEqVisit";
-            // 
-            // Equipo2
-            // 
-            Equipo2.HeaderText = "Equipo2";
-            Equipo2.Name = "Equipo2";
+            JornadaData.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            JornadaData.Dock = DockStyle.Fill;
+            JornadaData.Location = new Point(0, 0);
+            JornadaData.Name = "JornadaData";
+            JornadaData.Size = new Size(1038, 688);
+            JornadaData.TabIndex = 0;
+            JornadaData.CellContentClick += dataGridView2_CellContentClick;
             // 
             // panel3
             // 
@@ -347,6 +183,7 @@
             BuscarBtn.TabIndex = 8;
             BuscarBtn.Text = "Buscar";
             BuscarBtn.UseVisualStyleBackColor = true;
+            BuscarBtn.Click += BuscarBtn_Click;
             // 
             // Equipo2Txt
             // 
@@ -437,7 +274,7 @@
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)JornadaData).EndInit();
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
             ResumeLayout(false);
@@ -449,7 +286,7 @@
         private Panel panel1;
         private Panel panel2;
         private Button VerTodoPartBtn;
-        private DataGridView dataGridView2;
+        private DataGridView JornadaData;
         private Panel panel3;
         private TextBox Equipo2Txt;
         private Label label7;
@@ -459,35 +296,8 @@
         private Label label4;
         private Label label3;
         private TextBox JornadaTxt;
-        private DataGridViewTextBoxColumn Jornada;
-        private DataGridViewTextBoxColumn Equipo1;
-        private DataGridViewTextBoxColumn Puntuacion;
-        private DataGridViewTextBoxColumn goleEqVisit;
-        private DataGridViewTextBoxColumn Equipo2;
         private Button VerTodoLigaBtn;
         private Button GuardarBtn;
         private Button BuscarBtn;
-        private DataGridViewTextBoxColumn Equipo;
-        private DataGridViewTextBoxColumn PT;
-        private DataGridViewTextBoxColumn PJ;
-        private DataGridViewTextBoxColumn PG;
-        private DataGridViewTextBoxColumn PE;
-        private DataGridViewTextBoxColumn PP;
-        private DataGridViewTextBoxColumn GF;
-        private DataGridViewTextBoxColumn GC;
-        private DataGridViewTextBoxColumn PT2;
-        private DataGridViewTextBoxColumn PJ2;
-        private DataGridViewTextBoxColumn PG2;
-        private DataGridViewTextBoxColumn PE2;
-        private DataGridViewTextBoxColumn PP2;
-        private DataGridViewTextBoxColumn GF2;
-        private DataGridViewTextBoxColumn GC2;
-        private DataGridViewTextBoxColumn PT3;
-        private DataGridViewTextBoxColumn PJ3;
-        private DataGridViewTextBoxColumn PG3;
-        private DataGridViewTextBoxColumn PE3;
-        private DataGridViewTextBoxColumn PP3;
-        private DataGridViewTextBoxColumn GF3;
-        private DataGridViewTextBoxColumn GC3;
     }
 }
