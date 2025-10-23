@@ -1,4 +1,5 @@
 using System.ComponentModel.Design.Serialization;
+using System.Drawing.Drawing2D;
 using System.Text.Json;
 
 namespace _07_JsonMapearMascotas
@@ -10,7 +11,9 @@ namespace _07_JsonMapearMascotas
             InitializeComponent();
         }
 
-        private string GetJsonFromUrl (string url)
+        private int currentPetIndex = 0;
+
+        private string GetJsonFromUrl(string url)
         {
             try
             {
@@ -32,7 +35,7 @@ namespace _07_JsonMapearMascotas
         {
             string jsonData = GetJsonFromUrl("  https://raw.githubusercontent.com/LearnWebCode/json-example/master/pets-data.json");
 
-            if(!string.IsNullOrEmpty(jsonData))
+            if (!string.IsNullOrEmpty(jsonData))
             {
                 try
                 {
@@ -40,9 +43,15 @@ namespace _07_JsonMapearMascotas
                     PetList petsData = JsonSerializer.Deserialize<PetList>(jsonData);
 
                     //Si hay datos ==> Introducimos al gridView
-                    if(petsData != null && petsData != null)
+                    if (petsData != null && petsData != null)
                     {
                         dgvMascotas.DataSource = petsData.pets;
+
+                        if (petsData.pets.Count > 0)
+                        {
+                            currentPetIndex = 0; // Inicializa el índice
+                            MostrarMascota(petsData, currentPetIndex);
+                        }
                     }
                 }
                 catch (Exception ex)
@@ -50,7 +59,70 @@ namespace _07_JsonMapearMascotas
                     MessageBox.Show($"Erorr deserializando JSON: {ex.Message}");
                 }
             }
-            
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAtras_Click(object sender, EventArgs e)
+        {
+            string jsonData = GetJsonFromUrl("  https://raw.githubusercontent.com/LearnWebCode/json-example/master/pets-data.json");
+            try
+            {
+                PetList petsData = JsonSerializer.Deserialize<PetList>(jsonData);
+
+                if (petsData != null && petsData.pets != null && petsData.pets.Count > 0)
+                {
+                    if (currentPetIndex > 0)
+                    {
+
+                        currentPetIndex--;
+                        MostrarMascota(petsData, currentPetIndex);
+
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ya estas en la primera mascota: {ex.Message}");
+            }
+        }
+
+        private void MostrarMascota(PetList petsData, int index)
+        {
+            var pet = petsData.pets[index];
+            txtNombreMascota.Text = pet.name;
+            txtNacimiento.Text = pet.birthYear.ToString();
+            txtEspecie.Text = pet.species.ToString();
+            imgMascota.Load(pet.photo);
+            imgMascota.SizeMode = PictureBoxSizeMode.StretchImage;
+        }
+
+        private void btnAdelante_Click(object sender, EventArgs e)
+        {
+            string jsonData = GetJsonFromUrl("  https://raw.githubusercontent.com/LearnWebCode/json-example/master/pets-data.json");
+            try
+            {
+                PetList petsData = JsonSerializer.Deserialize<PetList>(jsonData);
+
+                if (petsData != null && petsData.pets != null && petsData.pets.Count > 0)
+                {
+                    if (currentPetIndex < petsData.pets.Count)
+                    {
+
+                        currentPetIndex++;
+                        MostrarMascota(petsData, currentPetIndex);
+
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ya estas en la ultima mascota: {ex.Message}");
+            }
         }
     }
 }
