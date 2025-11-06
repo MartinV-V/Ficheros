@@ -11,6 +11,7 @@ namespace _08_LectorYaml
 {
     public partial class Form1 : Form
     {
+        //Aqui definimos la ruta del archivo de configuracion YAML
         private readonly string configPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "configuracion.yml");
 
         public Form1()
