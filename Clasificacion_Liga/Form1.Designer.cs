@@ -28,16 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Label TOTAL;
-            Label label1;
-            Label label2;
-            dataGridView1 = new DataGridView();
-            panel1 = new Panel();
-            VerTodoLigaBtn = new Button();
             panel2 = new Panel();
             VerTodoPartBtn = new Button();
             JornadaData = new DataGridView();
             panel3 = new Panel();
+            label2 = new Label();
             GuardarBtn = new Button();
             BuscarBtn = new Button();
             Equipo2Txt = new TextBox();
@@ -48,75 +43,18 @@
             label4 = new Label();
             label3 = new Label();
             JornadaTxt = new TextBox();
-            TOTAL = new Label();
+            LigaData = new DataGridView();
+            VerTodoLigaBtn = new Button();
+            panel1 = new Panel();
+            DataBuscar = new DataGridView();
             label1 = new Label();
-            label2 = new Label();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)JornadaData).BeginInit();
             panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)LigaData).BeginInit();
+            panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)DataBuscar).BeginInit();
             SuspendLayout();
-            // 
-            // TOTAL
-            // 
-            TOTAL.AutoSize = true;
-            TOTAL.Location = new Point(288, 29);
-            TOTAL.Name = "TOTAL";
-            TOTAL.Size = new Size(51, 15);
-            TOTAL.TabIndex = 1;
-            TOTAL.Text = "TOTALES";
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(1222, 29);
-            label1.Name = "label1";
-            label1.Size = new Size(55, 15);
-            label1.TabIndex = 2;
-            label1.Text = "EN CASA";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(1863, 29);
-            label2.Name = "label2";
-            label2.Size = new Size(42, 15);
-            label2.TabIndex = 3;
-            label2.Text = "FUERA";
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Dock = DockStyle.Bottom;
-            dataGridView1.Location = new Point(0, 59);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(2242, 388);
-            dataGridView1.TabIndex = 0;
-            // 
-            // panel1
-            // 
-            panel1.Controls.Add(VerTodoLigaBtn);
-            panel1.Controls.Add(label2);
-            panel1.Controls.Add(label1);
-            panel1.Controls.Add(TOTAL);
-            panel1.Controls.Add(dataGridView1);
-            panel1.Dock = DockStyle.Bottom;
-            panel1.Location = new Point(0, 688);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(2242, 447);
-            panel1.TabIndex = 1;
-            // 
-            // VerTodoLigaBtn
-            // 
-            VerTodoLigaBtn.Dock = DockStyle.Right;
-            VerTodoLigaBtn.Location = new Point(1960, 0);
-            VerTodoLigaBtn.Name = "VerTodoLigaBtn";
-            VerTodoLigaBtn.Size = new Size(282, 59);
-            VerTodoLigaBtn.TabIndex = 10;
-            VerTodoLigaBtn.Text = "Ver Todo";
-            VerTodoLigaBtn.UseVisualStyleBackColor = true;
-            VerTodoLigaBtn.Click += VerTodoLigaBtn_Click;
             // 
             // panel2
             // 
@@ -125,13 +63,13 @@
             panel2.Dock = DockStyle.Right;
             panel2.Location = new Point(1204, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1038, 688);
+            panel2.Size = new Size(1038, 694);
             panel2.TabIndex = 2;
             // 
             // VerTodoPartBtn
             // 
             VerTodoPartBtn.Dock = DockStyle.Bottom;
-            VerTodoPartBtn.Location = new Point(0, 629);
+            VerTodoPartBtn.Location = new Point(0, 635);
             VerTodoPartBtn.Name = "VerTodoPartBtn";
             VerTodoPartBtn.Size = new Size(1038, 59);
             VerTodoPartBtn.TabIndex = 1;
@@ -145,13 +83,13 @@
             JornadaData.Dock = DockStyle.Fill;
             JornadaData.Location = new Point(0, 0);
             JornadaData.Name = "JornadaData";
-            JornadaData.Size = new Size(1038, 688);
+            JornadaData.Size = new Size(1038, 694);
             JornadaData.TabIndex = 0;
             JornadaData.CellContentClick += dataGridView2_CellContentClick;
             // 
             // panel3
             // 
-            panel3.Controls.Add(GuardarBtn);
+            panel3.Controls.Add(label2);
             panel3.Controls.Add(BuscarBtn);
             panel3.Controls.Add(Equipo2Txt);
             panel3.Controls.Add(label7);
@@ -164,27 +102,38 @@
             panel3.Dock = DockStyle.Fill;
             panel3.Location = new Point(0, 0);
             panel3.Name = "panel3";
-            panel3.Size = new Size(1204, 688);
+            panel3.Size = new Size(1204, 694);
             panel3.TabIndex = 3;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI Semibold", 27.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            label2.Location = new Point(1042, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(156, 50);
+            label2.TabIndex = 11;
+            label2.Text = "Jornada";
             // 
             // GuardarBtn
             // 
-            GuardarBtn.Location = new Point(303, 482);
+            GuardarBtn.Location = new Point(1096, 256);
             GuardarBtn.Name = "GuardarBtn";
-            GuardarBtn.Size = new Size(151, 58);
+            GuardarBtn.Size = new Size(108, 182);
             GuardarBtn.TabIndex = 9;
             GuardarBtn.Text = "Guardar en Csv";
             GuardarBtn.UseVisualStyleBackColor = true;
+            GuardarBtn.Click += GuardarBtn_Click;
             // 
             // BuscarBtn
             // 
             BuscarBtn.Location = new Point(35, 482);
             BuscarBtn.Name = "BuscarBtn";
-            BuscarBtn.Size = new Size(151, 58);
+            BuscarBtn.Size = new Size(493, 58);
             BuscarBtn.TabIndex = 8;
             BuscarBtn.Text = "Buscar";
             BuscarBtn.UseVisualStyleBackColor = true;
-            BuscarBtn.Click += BuscarBtn_Click;
+            BuscarBtn.Click += BuscarBtn_Click_1;
             // 
             // Equipo2Txt
             // 
@@ -257,6 +206,58 @@
             JornadaTxt.Size = new Size(163, 23);
             JornadaTxt.TabIndex = 0;
             // 
+            // LigaData
+            // 
+            LigaData.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            LigaData.Dock = DockStyle.Right;
+            LigaData.Location = new Point(1204, 0);
+            LigaData.Name = "LigaData";
+            LigaData.Size = new Size(1038, 441);
+            LigaData.TabIndex = 0;
+            // 
+            // VerTodoLigaBtn
+            // 
+            VerTodoLigaBtn.Location = new Point(1096, 50);
+            VerTodoLigaBtn.Name = "VerTodoLigaBtn";
+            VerTodoLigaBtn.Size = new Size(108, 200);
+            VerTodoLigaBtn.TabIndex = 10;
+            VerTodoLigaBtn.Text = "Ver Todo";
+            VerTodoLigaBtn.UseVisualStyleBackColor = true;
+            VerTodoLigaBtn.Click += VerTodoLigaBtn_Click;
+            // 
+            // panel1
+            // 
+            panel1.Controls.Add(DataBuscar);
+            panel1.Controls.Add(GuardarBtn);
+            panel1.Controls.Add(VerTodoLigaBtn);
+            panel1.Controls.Add(label1);
+            panel1.Controls.Add(LigaData);
+            panel1.Dock = DockStyle.Bottom;
+            panel1.Location = new Point(0, 694);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(2242, 441);
+            panel1.TabIndex = 1;
+            panel1.Paint += panel1_Paint;
+            // 
+            // DataBuscar
+            // 
+            DataBuscar.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            DataBuscar.Dock = DockStyle.Left;
+            DataBuscar.Location = new Point(0, 0);
+            DataBuscar.Name = "DataBuscar";
+            DataBuscar.Size = new Size(701, 441);
+            DataBuscar.TabIndex = 11;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI Semibold", 27.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            label1.Location = new Point(888, -3);
+            label1.Name = "label1";
+            label1.Size = new Size(316, 50);
+            label1.TabIndex = 10;
+            label1.Text = "Liga Clasificacion";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -271,20 +272,18 @@
             MinimizeBox = false;
             Name = "Form1";
             Text = "Clasificacion Liga";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
             panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)JornadaData).EndInit();
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)LigaData).EndInit();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)DataBuscar).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
-
-        private DataGridView dataGridView1;
-        private Panel panel1;
         private Panel panel2;
         private Button VerTodoPartBtn;
         private DataGridView JornadaData;
@@ -297,8 +296,13 @@
         private Label label4;
         private Label label3;
         private TextBox JornadaTxt;
-        private Button VerTodoLigaBtn;
         private Button GuardarBtn;
         private Button BuscarBtn;
+        private DataGridView LigaData;
+        private Button VerTodoLigaBtn;
+        private Panel panel1;
+        private Label label1;
+        private Label label2;
+        private DataGridView DataBuscar;
     }
 }
