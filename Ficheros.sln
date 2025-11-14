@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07-JsonMapearMascotas", "07
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08-LectorYaml", "08-LectorYaml\08-LectorYaml.csproj", "{4A703A63-5691-4C5F-86F9-8E306B588255}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dialogo_entre_forms", "Dialogo_entre_forms\Dialogo_entre_forms.csproj", "{1B023593-A596-4FE1-8086-DE5B13B57C99}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{4A703A63-5691-4C5F-86F9-8E306B588255}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4A703A63-5691-4C5F-86F9-8E306B588255}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4A703A63-5691-4C5F-86F9-8E306B588255}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B023593-A596-4FE1-8086-DE5B13B57C99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B023593-A596-4FE1-8086-DE5B13B57C99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B023593-A596-4FE1-8086-DE5B13B57C99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B023593-A596-4FE1-8086-DE5B13B57C99}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
